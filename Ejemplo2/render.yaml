@@ -1,0 +1,17 @@
+# Exported from Render on 2026-11-03T15:12:48Z
+version: "1"
+projects:
+  - name: My project
+    environments:
+      - name: Production
+        services:
+          - type: web
+            name: apis2026
+            runtime: node
+            repo: https://github.com/on1ntza/apis2026
+            plan: free
+            region: oregon
+            buildCommand: npm install
+            startCommand: npm run dev
+            autoDeployTrigger: commit
+            rootDir: Ejemplo2/
